@@ -181,6 +181,8 @@ controller.onButtonTap = {
 }
 ```
 
+![A gif of the extension going from compact to expanded presentation style](Images/Expanding.gif)
+
 ### Creating 'Updatable' Messages
 
 Usually within the Messages app, any new content - be it a text message or one of the nifty new stickers - is inserted as a new message at the bottom of the transcript, completely independent of all previous messages.
