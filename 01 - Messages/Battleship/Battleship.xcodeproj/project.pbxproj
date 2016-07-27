@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		278BF5F01D3D3D7300343C94 /* ShipDestroyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278BF5EF1D3D3D7300343C94 /* ShipDestroyViewController.swift */; };
+		278BF5F21D3D3F4A00343C94 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278BF5F11D3D3F4A00343C94 /* GameModel.swift */; };
+		27DFA6431D3D227C00E51D6E /* GameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFA6421D3D227C00E51D6E /* GameBoardView.swift */; };
+		27DFA6451D3D31D700E51D6E /* UIImage+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFA6441D3D31D700E51D6E /* UIImage+Snapshot.swift */; };
+		27EDD24A1D3FB0F20020D961 /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EDD2491D3FB0F20020D961 /* GameConstants.swift */; };
+		F62A57991D38380E0037EC1A /* ShipLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62A57981D38380E0037EC1A /* ShipLocationViewController.swift */; };
+		F6953E8A1D38301200C0D059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6953E891D38301200C0D059 /* Assets.xcassets */; };
+		F6953E911D38301200C0D059 /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F6953E901D38301200C0D059 /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F6953E961D38301200C0D059 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6953E951D38301200C0D059 /* Messages.framework */; };
+		F6953E991D38301200C0D059 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6953E981D38301200C0D059 /* MessagesViewController.swift */; };
+		F6953E9C1D38301200C0D059 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6953E9A1D38301200C0D059 /* MainInterface.storyboard */; };
+		F6953E9E1D38301200C0D059 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6953E9D1D38301200C0D059 /* Assets.xcassets */; };
+		F6953EAA1D38330300C0D059 /* GameStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6953EA91D38330300C0D059 /* GameStartViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6953E921D38301200C0D059 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6953E801D38301200C0D059 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6953E8F1D38301200C0D059;
+			remoteInfo = MessagesExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6953EA51D38301200C0D059 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F6953E911D38301200C0D059 /* MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		278BF5EF1D3D3D7300343C94 /* ShipDestroyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipDestroyViewController.swift; sourceTree = "<group>"; };
+		278BF5F11D3D3F4A00343C94 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		27DFA6421D3D227C00E51D6E /* GameBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameBoardView.swift; sourceTree = "<group>"; };
+		27DFA6441D3D31D700E51D6E /* UIImage+Snapshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Snapshot.swift"; sourceTree = "<group>"; };
+		27EDD2491D3FB0F20020D961 /* GameConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		F62A57981D38380E0037EC1A /* ShipLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipLocationViewController.swift; sourceTree = "<group>"; };
+		F6953E861D38301200C0D059 /* Battleship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Battleship.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6953E891D38301200C0D059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6953E8B1D38301200C0D059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6953E901D38301200C0D059 /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6953E951D38301200C0D059 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		F6953E981D38301200C0D059 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		F6953E9B1D38301200C0D059 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F6953E9D1D38301200C0D059 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6953E9F1D38301200C0D059 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6953EA91D38330300C0D059 /* GameStartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6953E8D1D38301200C0D059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6953E961D38301200C0D059 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		278BF5F31D3D3FAB00343C94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				278BF5F11D3D3F4A00343C94 /* GameModel.swift */,
+				27EDD2491D3FB0F20020D961 /* GameConstants.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		278BF5F41D3D3FB300343C94 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				27DFA6441D3D31D700E51D6E /* UIImage+Snapshot.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		278BF5F51D3D3FBA00343C94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27DFA6421D3D227C00E51D6E /* GameBoardView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		278BF5F61D3D3FBF00343C94 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6953E981D38301200C0D059 /* MessagesViewController.swift */,
+				F6953EA91D38330300C0D059 /* GameStartViewController.swift */,
+				F62A57981D38380E0037EC1A /* ShipLocationViewController.swift */,
+				278BF5EF1D3D3D7300343C94 /* ShipDestroyViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F6953E7F1D38301100C0D059 = {
+			isa = PBXGroup;
+			children = (
+				F6953E881D38301200C0D059 /* Battleship */,
+				F6953E971D38301200C0D059 /* MessagesExtension */,
+				F6953E941D38301200C0D059 /* Frameworks */,
+				F6953E871D38301200C0D059 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6953E871D38301200C0D059 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6953E861D38301200C0D059 /* Battleship.app */,
+				F6953E901D38301200C0D059 /* MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6953E881D38301200C0D059 /* Battleship */ = {
+			isa = PBXGroup;
+			children = (
+				F6953E891D38301200C0D059 /* Assets.xcassets */,
+				F6953E8B1D38301200C0D059 /* Info.plist */,
+			);
+			path = Battleship;
+			sourceTree = "<group>";
+		};
+		F6953E941D38301200C0D059 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6953E951D38301200C0D059 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6953E971D38301200C0D059 /* MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				278BF5F41D3D3FB300343C94 /* Util */,
+				278BF5F31D3D3FAB00343C94 /* Model */,
+				278BF5F51D3D3FBA00343C94 /* View */,
+				278BF5F61D3D3FBF00343C94 /* Controllers */,
+				F6953E9A1D38301200C0D059 /* MainInterface.storyboard */,
+				F6953E9D1D38301200C0D059 /* Assets.xcassets */,
+				F6953E9F1D38301200C0D059 /* Info.plist */,
+			);
+			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6953E851D38301200C0D059 /* Battleship */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6953EA61D38301200C0D059 /* Build configuration list for PBXNativeTarget "Battleship" */;
+			buildPhases = (
+				F6953E841D38301200C0D059 /* Resources */,
+				F6953EA51D38301200C0D059 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6953E931D38301200C0D059 /* PBXTargetDependency */,
+			);
+			name = Battleship;
+			productName = Battleship;
+			productReference = F6953E861D38301200C0D059 /* Battleship.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		F6953E8F1D38301200C0D059 /* MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6953EA21D38301200C0D059 /* Build configuration list for PBXNativeTarget "MessagesExtension" */;
+			buildPhases = (
+				F6953E8C1D38301200C0D059 /* Sources */,
+				F6953E8D1D38301200C0D059 /* Frameworks */,
+				F6953E8E1D38301200C0D059 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessagesExtension;
+			productName = MessagesExtension;
+			productReference = F6953E901D38301200C0D059 /* MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6953E801D38301200C0D059 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F6953E851D38301200C0D059 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						DevelopmentTeamName = "Scott Logic Limited";
+						ProvisioningStyle = Automatic;
+					};
+					F6953E8F1D38301200C0D059 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						DevelopmentTeamName = "Scott Logic Limited";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F6953E831D38301200C0D059 /* Build configuration list for PBXProject "Battleship" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6953E7F1D38301100C0D059;
+			productRefGroup = F6953E871D38301200C0D059 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6953E851D38301200C0D059 /* Battleship */,
+				F6953E8F1D38301200C0D059 /* MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6953E841D38301200C0D059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6953E8A1D38301200C0D059 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6953E8E1D38301200C0D059 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6953E9E1D38301200C0D059 /* Assets.xcassets in Resources */,
+				F6953E9C1D38301200C0D059 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6953E8C1D38301200C0D059 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278BF5F21D3D3F4A00343C94 /* GameModel.swift in Sources */,
+				F62A57991D38380E0037EC1A /* ShipLocationViewController.swift in Sources */,
+				F6953EAA1D38330300C0D059 /* GameStartViewController.swift in Sources */,
+				F6953E991D38301200C0D059 /* MessagesViewController.swift in Sources */,
+				27DFA6451D3D31D700E51D6E /* UIImage+Snapshot.swift in Sources */,
+				27EDD24A1D3FB0F20020D961 /* GameConstants.swift in Sources */,
+				278BF5F01D3D3D7300343C94 /* ShipDestroyViewController.swift in Sources */,
+				27DFA6431D3D227C00E51D6E /* GameBoardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6953E931D38301200C0D059 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6953E8F1D38301200C0D059 /* MessagesExtension */;
+			targetProxy = F6953E921D38301200C0D059 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6953E9A1D38301200C0D059 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6953E9B1D38301200C0D059 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6953EA01D38301200C0D059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F6953EA11D38301200C0D059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6953EA31D38301200C0D059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.Battleship.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F6953EA41D38301200C0D059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = MessagesExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.Battleship.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F6953EA71D38301200C0D059 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Battleship/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.Battleship;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6953EA81D38301200C0D059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Battleship/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.Battleship;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6953E831D38301200C0D059 /* Build configuration list for PBXProject "Battleship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6953EA01D38301200C0D059 /* Debug */,
+				F6953EA11D38301200C0D059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6953EA21D38301200C0D059 /* Build configuration list for PBXNativeTarget "MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6953EA31D38301200C0D059 /* Debug */,
+				F6953EA41D38301200C0D059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6953EA61D38301200C0D059 /* Build configuration list for PBXNativeTarget "Battleship" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6953EA71D38301200C0D059 /* Debug */,
+				F6953EA81D38301200C0D059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6953E801D38301200C0D059 /* Project object */;
+}
