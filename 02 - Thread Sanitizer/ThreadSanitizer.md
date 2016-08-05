@@ -4,11 +4,11 @@ ___
 
 # Thread Sanitizer
 
-Imagine your app is almost ready: it's beautifully polished and unit test coverage is very high. There's just one problem: there's a horrible bug which is only occurring intermittently and you've sunk hours into trying to fix it. What on earth could it be? Often these are due to multiple threads.
+Imagine your app is almost ready: it's beautifully polished and unit test coverage is very high. There's just one problem: there's a horrible bug which is only occurring intermittently and you've sunk hours into trying to fix it. What on earth could it be?
 
-I'd hazard a guess that threading issues are the cause of many developer nightmares. They're notoriously difficult to track down as bug only occurs under certain conditions: so determining the root cause of the issue can be very tricky indeed.
+Often these are due to multiple threads accessing the same bit of memory at the same time. I'd hazard a guess that threading issues are the cause of many developer nightmares. They're notoriously difficult to track down as bug only occurs under certain conditions: so determining the root cause of the issue can be very tricky indeed.
 
-Often the cause of this is what's known as a 'race condition'. We won't go into too much detail about what that means (// insert link to comprehensive article), but to quote the [ThreadSanitizer Manual from Google](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual):
+Often the cause of this is what's known as a 'race condition'. We won't go into too much detail about what that means, but to quote the [ThreadSanitizer Manual from Google](https://github.com/google/sanitizers/wiki/ThreadSanitizerCppManual):
 
 > A data race occurs when two threads access the same variable concurrently and at least one of the accesses is write.
 
@@ -64,7 +64,7 @@ The only other thing to note is the completion block, which is executed when a d
 
 Our view controller consists of two buttons - for depositing and withdrawing - and a label to display the current balance. Here's the layout in the storyboard:
 
-// Insert image of storyboard
+![Screenshot of storyboard scene](Images/Storyboard_Scene.png)
 
 To hook up our UI elements, we have an IBOutlet which references the balance label and a method that updates the label with the user's current balance.
 
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
 
 Let's give it a spin:
 
-![Gif showing pressing the withdraw button causes the main thread to block](Block_Thread.gif)
+![Gif showing pressing the withdraw button causes the main thread to block](Images/Block_Thread.gif)
 
 Hmmm... it's a bit slow when we try and withdraw our money! This is due to our `Account`'s `withdraw` method and its strict "fraud checking" which causes the main thread to block until the method has been completed. We want users to be able to repeatedly tap 'Deposit' and 'Withdraw' with minimal delay.
 
@@ -146,7 +146,7 @@ Turning on the sanitizer is as simple as going to your target's scheme settings 
 
 As the thread sanitizer only works at runtime, we'll need to recompile and re-run our application. Let's do that.
 
-> In the WWDC presentation, Apple recommend turning on thread sanitizer in all your unit tests. The sanitizer operates at runtime and is only able to determine data races if the code is executed. If your code is well-covered by unit tests, then you may find the Thread Sanitizer finds most, if not all, of the race conditions in your project (you may find Xcode 7's code coverage tool we blogged about as part of iOS 9 Day by Day a useful read // Insert link to post)
+> In the WWDC presentation, Apple recommend turning on thread sanitizer in all your unit tests. The sanitizer operates at runtime and is only able to determine data races if the code is executed. If your code is well-covered by unit tests, then you may find the Thread Sanitizer finds most, if not all, of the race conditions in your project (you may find Xcode 7's code coverage tool we blogged about as [part of iOS 9 Day by Day](https://www.shinobicontrols.com/blog/ios9-day-by-day-day5-xcode-code-coverage-tools) a useful read).
 
 > Something else worth noting is that it can only be run on Swift code written in version 3 of the language (Objective-C is compatible too) and can only be run using 64 bit simulators.
 
