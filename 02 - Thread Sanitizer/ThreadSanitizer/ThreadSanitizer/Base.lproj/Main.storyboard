@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RUM-jt-T5l">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FqR-S5-B0g">
+            <objects>
+                <viewController id="RUM-jt-T5l" customClass="ViewController" customModule="ThreadSanitizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6e-5S-g53"/>
+                        <viewControllerLayoutGuide type="bottom" id="gfu-Qh-dqH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUX-ua-Ke2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oR9-pU-n58">
+                                <color key="backgroundColor" red="0.45969827590000001" green="0.22653556029999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Withdraw $100">
+                                    <color key="titleColor" red="0.98788275219999999" green="0.99481446100000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="withdraw:" destination="RUM-jt-T5l" eventType="touchUpInside" id="FWD-hv-b4x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance: $100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNK-vl-4Lu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nww-eV-3YN">
+                                <color key="backgroundColor" red="0.0" green="0.85633081889999996" blue="0.31274245690000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Deposit $100">
+                                    <color key="titleColor" red="0.98788275219999999" green="0.99481446100000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deposit:" destination="RUM-jt-T5l" eventType="touchUpInside" id="bHe-cg-WMD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.12941176469999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nww-eV-3YN" firstAttribute="top" secondItem="oR9-pU-n58" secondAttribute="bottom" constant="20" id="41D-Sb-IMc"/>
+                            <constraint firstItem="oR9-pU-n58" firstAttribute="centerX" secondItem="qUX-ua-Ke2" secondAttribute="centerX" id="4a8-I4-mIK"/>
+                            <constraint firstItem="YNK-vl-4Lu" firstAttribute="centerX" secondItem="qUX-ua-Ke2" secondAttribute="centerX" id="JHi-GZ-9FN"/>
+                            <constraint firstItem="oR9-pU-n58" firstAttribute="centerY" secondItem="qUX-ua-Ke2" secondAttribute="centerY" id="Mrm-xY-iYb"/>
+                            <constraint firstItem="Nww-eV-3YN" firstAttribute="centerX" secondItem="qUX-ua-Ke2" secondAttribute="centerX" id="NWS-Ut-9nR"/>
+                            <constraint firstItem="oR9-pU-n58" firstAttribute="top" secondItem="YNK-vl-4Lu" secondAttribute="bottom" constant="100" id="NrF-Yb-JaO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="YNK-vl-4Lu" id="Ooe-lz-2MU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M1P-uu-pHw" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
