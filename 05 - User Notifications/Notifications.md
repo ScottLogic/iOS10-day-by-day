@@ -200,8 +200,6 @@ func toggleReminder(for task: Task) {
 
 We schedule a notification if `request` is nil, as that must mean a notification doesn't currently exist. Otherwise, we remove the pending notification by passing the notification center the task's identifier (e.g. 'Exercise' or 'Walk Dog') and update the icon to display the notification has been 'muted'.
 
-// WIP: Insert picture of reminder
-
 Nice work! We now have a notification that buzzes every 60 seconds until the user turns it off by navigating to our application and finding the task.
 
 However, it'd be great if we could give the user the opportunity to cancel the repeating notification from the notification itself...
