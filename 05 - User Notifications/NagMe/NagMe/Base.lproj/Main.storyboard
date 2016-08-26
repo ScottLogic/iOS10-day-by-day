@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8YY-Rl-XU3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nag Me Table View Controller-->
+        <scene sceneID="YwY-UW-u4O">
+            <objects>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="8YY-Rl-XU3" customClass="NagMeTableViewController" customModule="NagMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ZR-Ky-zEl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" id="dfw-fy-2KT" customClass="TaskCell" customModule="NagMe">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfw-fy-2KT" id="RYg-gx-3UC">
+                                    <frame key="frameInset" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wash Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxE-pO-Zuv">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHU-iy-THG">
+                                            <color key="backgroundColor" red="0.80392158030000005" green="0.80392158030000005" blue="0.80392158030000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="oO9-CK-ltN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <state key="normal" title="🔊"/>
+                                            <connections>
+                                                <action selector="remindButtonTapped:" destination="dfw-fy-2KT" eventType="touchUpInside" id="hdn-Yo-Owf"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rxE-pO-Zuv" firstAttribute="centerY" secondItem="RYg-gx-3UC" secondAttribute="centerY" id="8Op-Mv-WgM"/>
+                                        <constraint firstItem="rxE-pO-Zuv" firstAttribute="leading" secondItem="RYg-gx-3UC" secondAttribute="leadingMargin" id="Q5E-Hk-ioe"/>
+                                        <constraint firstAttribute="trailing" secondItem="NHU-iy-THG" secondAttribute="trailing" id="TY7-ah-xHJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="NHU-iy-THG" secondAttribute="bottom" id="Wsj-0w-vKN"/>
+                                        <constraint firstItem="NHU-iy-THG" firstAttribute="top" secondItem="RYg-gx-3UC" secondAttribute="top" id="ZCB-R1-xgU"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="rxE-pO-Zuv" id="ZEp-Q4-Nw3"/>
+                                    <outlet property="toggleReminderButton" destination="NHU-iy-THG" id="MUb-zw-j04"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8YY-Rl-XU3" id="aZF-0C-Cz1"/>
+                            <outlet property="delegate" destination="8YY-Rl-XU3" id="nDS-AM-UPx"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UFK-7G-taw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="24"/>
+        </scene>
+    </scenes>
+</document>
