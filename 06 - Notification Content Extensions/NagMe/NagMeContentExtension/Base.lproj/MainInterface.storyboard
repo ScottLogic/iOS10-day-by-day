@@ -45,6 +45,7 @@
                     <size key="freeformSize" width="320" height="160"/>
                     <connections>
                         <outlet property="label" destination="GcN-lo-r42" id="lpW-cU-7IG"/>
+                        <outlet property="speakerLabel" destination="2Kp-Qd-Xt5" id="RC1-e1-0zp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
