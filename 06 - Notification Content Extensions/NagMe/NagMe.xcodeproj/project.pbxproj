@@ -14,7 +14,36 @@
 		271AE4681D705A2E00E509A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271AE4661D705A2E00E509A6 /* LaunchScreen.storyboard */; };
 		271AE4701D705A4C00E509A6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE46F1D705A4C00E509A6 /* TaskCell.swift */; };
 		271AE4721D705A5000E509A6 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE4711D705A5000E509A6 /* Identifiers.swift */; };
+		27893CE81D78782000A507B8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27893CE71D78782000A507B8 /* UserNotifications.framework */; };
+		27893CEA1D78782000A507B8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27893CE91D78782000A507B8 /* UserNotificationsUI.framework */; };
+		27893CED1D78782000A507B8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27893CEC1D78782000A507B8 /* NotificationViewController.swift */; };
+		27893CF01D78782000A507B8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27893CEE1D78782000A507B8 /* MainInterface.storyboard */; };
+		27893CF41D78782000A507B8 /* NagMeContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 27893CE51D78782000A507B8 /* NagMeContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27893CF21D78782000A507B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 271AE4521D705A2E00E509A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27893CE41D78782000A507B8;
+			remoteInfo = NagMeContentExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		27893CF81D78782000A507B8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				27893CF41D78782000A507B8 /* NagMeContentExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		271AE45A1D705A2E00E509A6 /* NagMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NagMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +55,12 @@
 		271AE4691D705A2E00E509A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		271AE46F1D705A4C00E509A6 /* TaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		271AE4711D705A5000E509A6 /* Identifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
+		27893CE51D78782000A507B8 /* NagMeContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NagMeContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		27893CE71D78782000A507B8 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		27893CE91D78782000A507B8 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		27893CEC1D78782000A507B8 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		27893CEF1D78782000A507B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		27893CF11D78782000A507B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +71,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27893CE21D78782000A507B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27893CEA1D78782000A507B8 /* UserNotificationsUI.framework in Frameworks */,
+				27893CE81D78782000A507B8 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -43,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				271AE45C1D705A2E00E509A6 /* NagMe */,
+				27893CEB1D78782000A507B8 /* NagMeContentExtension */,
+				27893CE61D78782000A507B8 /* Frameworks */,
 				271AE45B1D705A2E00E509A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				271AE45A1D705A2E00E509A6 /* NagMe.app */,
+				27893CE51D78782000A507B8 /* NagMeContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +117,25 @@
 			path = NagMe;
 			sourceTree = "<group>";
 		};
+		27893CE61D78782000A507B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27893CE71D78782000A507B8 /* UserNotifications.framework */,
+				27893CE91D78782000A507B8 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		27893CEB1D78782000A507B8 /* NagMeContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				27893CEC1D78782000A507B8 /* NotificationViewController.swift */,
+				27893CEE1D78782000A507B8 /* MainInterface.storyboard */,
+				27893CF11D78782000A507B8 /* Info.plist */,
+			);
+			path = NagMeContentExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,15 +146,34 @@
 				271AE4561D705A2E00E509A6 /* Sources */,
 				271AE4571D705A2E00E509A6 /* Frameworks */,
 				271AE4581D705A2E00E509A6 /* Resources */,
+				27893CF81D78782000A507B8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				27893CF31D78782000A507B8 /* PBXTargetDependency */,
 			);
 			name = NagMe;
 			productName = NagMe;
 			productReference = 271AE45A1D705A2E00E509A6 /* NagMe.app */;
 			productType = "com.apple.product-type.application";
+		};
+		27893CE41D78782000A507B8 /* NagMeContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27893CF71D78782000A507B8 /* Build configuration list for PBXNativeTarget "NagMeContentExtension" */;
+			buildPhases = (
+				27893CE11D78782000A507B8 /* Sources */,
+				27893CE21D78782000A507B8 /* Frameworks */,
+				27893CE31D78782000A507B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NagMeContentExtension;
+			productName = NagMeContentExtension;
+			productReference = 27893CE51D78782000A507B8 /* NagMeContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +186,11 @@
 				ORGANIZATIONNAME = ShinobiControls;
 				TargetAttributes = {
 					271AE4591D705A2E00E509A6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						ProvisioningStyle = Automatic;
+					};
+					27893CE41D78782000A507B8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XJ74287KY8;
 						ProvisioningStyle = Automatic;
@@ -121,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				271AE4591D705A2E00E509A6 /* NagMe */,
+				27893CE41D78782000A507B8 /* NagMeContentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -133,6 +224,14 @@
 				271AE4681D705A2E00E509A6 /* LaunchScreen.storyboard in Resources */,
 				271AE4651D705A2E00E509A6 /* Assets.xcassets in Resources */,
 				271AE4631D705A2E00E509A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27893CE31D78782000A507B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27893CF01D78782000A507B8 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +249,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27893CE11D78782000A507B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27893CED1D78782000A507B8 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27893CF31D78782000A507B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27893CE41D78782000A507B8 /* NagMeContentExtension */;
+			targetProxy = 27893CF21D78782000A507B8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		271AE4611D705A2E00E509A6 /* Main.storyboard */ = {
@@ -167,6 +282,14 @@
 				271AE4671D705A2E00E509A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		27893CEE1D78782000A507B8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27893CEF1D78782000A507B8 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -268,6 +391,7 @@
 		271AE46D1D705A2E00E509A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XJ74287KY8;
 				INFOPLIST_FILE = NagMe/Info.plist;
@@ -281,12 +405,41 @@
 		271AE46E1D705A2E00E509A6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XJ74287KY8;
 				INFOPLIST_FILE = NagMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.NagMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		27893CF51D78782000A507B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = NagMeContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.NagMe.NagMeContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		27893CF61D78782000A507B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = NagMeContentExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shinobicontrols.NagMe.NagMeContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -308,6 +461,15 @@
 			buildConfigurations = (
 				271AE46D1D705A2E00E509A6 /* Debug */,
 				271AE46E1D705A2E00E509A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27893CF71D78782000A507B8 /* Build configuration list for PBXNativeTarget "NagMeContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27893CF51D78782000A507B8 /* Debug */,
+				27893CF61D78782000A507B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
