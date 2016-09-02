@@ -24,7 +24,31 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         label.text = "Reminder: \(notification.request.content.body)"
         speakerLabel.shake()
     }
-
+    
+    func didReceive(_ response: UNNotificationResponse,
+                    completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+        
+        if response.actionIdentifier == Identifiers.cancelAction {
+            let request = response.notification.request
+            
+            let identifiers = [request.identifier]
+            
+            // Remove future notifications that have been scheduled
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+            
+            // Remove any notifications that have already been delivered so we're not cluttering up the user's notification center
+            UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: identifiers)
+            
+            // Visual feedback that notification has been cancelled
+            speakerLabel.text = "🔇"
+            speakerLabel.cancelShake()
+            
+            completion(.doNotDismiss)
+        }
+        else {
+            completion(.dismiss)
+        }
+    }
 }
 
 extension UIView {
