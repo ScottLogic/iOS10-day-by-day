@@ -14,6 +14,7 @@
 		271AE4681D705A2E00E509A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271AE4661D705A2E00E509A6 /* LaunchScreen.storyboard */; };
 		271AE4701D705A4C00E509A6 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE46F1D705A4C00E509A6 /* TaskCell.swift */; };
 		271AE4721D705A5000E509A6 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE4711D705A5000E509A6 /* Identifiers.swift */; };
+		2766975C1D788F3500C17608 /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271AE4711D705A5000E509A6 /* Identifiers.swift */; };
 		27893CE81D78782000A507B8 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27893CE71D78782000A507B8 /* UserNotifications.framework */; };
 		27893CEA1D78782000A507B8 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27893CE91D78782000A507B8 /* UserNotificationsUI.framework */; };
 		27893CED1D78782000A507B8 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27893CEC1D78782000A507B8 /* NotificationViewController.swift */; };
@@ -253,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2766975C1D788F3500C17608 /* Identifiers.swift in Sources */,
 				27893CED1D78782000A507B8 /* NotificationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
