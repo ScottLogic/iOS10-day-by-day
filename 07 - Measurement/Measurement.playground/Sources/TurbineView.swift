@@ -37,7 +37,7 @@ extension TurbineView {
                                  height: bounds.height - stalkStart)
         
         /** Blades **/
-        bladesImageView.image = UIImage(named: "Blades")
+        bladesImageView.image = UIImage(named: "Blades") // Wind Turbine by Lloyd Humphreys from the Noun Project
         bladesImageView.layer.anchorPoint = CGPoint(x: 0.5, y: 0.66)
         addSubview(bladesImageView)
         
