@@ -10,6 +10,8 @@ We'll not push the boundaries of speech recognition too far in this blog post. I
 
 ### Getting Started
 
+We'll create a new 'Single View Application' project - I chose to call mine 'DirectMe'.
+
 As is often the case with Apple, privacy is of paramount importance. Before we can think about starting to record audio and send it to Apple's servers, we need to request the user's permission and give a reason why we want to perform speech recognition. To do this, we need to add a bit of text for the key `NSSpeechRecognitionUsageDescription` in our `Info.plist`.
 
 While we're in there, we need to add another short bit of text to explain why we wish to use the microphone. For this, we'll use the key `NSMicrophoneUsageDescription`.
@@ -42,9 +44,9 @@ init() {
 }
 ```
 
-Great, we have permission! Let's get to the speech recognition code.
+Great, we've requested permission and hopefully our users will allow us to use... after all, our application will be pretty useless without it! Let's get to the speech recognition code.
 
-### Recognizing the Speech
+### Recognizing Speech
 
 Let's first create a property to store our speech recognizer:
 
@@ -53,7 +55,7 @@ private let speechRecognizer = SFSpeechRecognizer()
 ```
 The eagle-eyed amongst you may notice that this initializer is 'failable'. This is due to speech recognition not being available in all locales. In this case, we'll just make the assumption that recognition is available, however in a real-world application you'd probably want to update the UI to indicate it's not available.
 
-The core part of getting from a blob of streamed audio data to a human-readable string requires the following two public classes:
+The core part of getting from a blob of streamed audio data to a human-readable string requires the following two  classes:
 
 `SFSpeechAudioBufferRecognitionRequest` : Encapsulates a request to output speech from the audio data received from the microphone. It can be used to provide hints as to what the audio data contains (e.g dictation, search or whether it's simply confirmation dialogue in the form "yes" or "no").
 
@@ -111,7 +113,7 @@ func start() {
 
 Above, we create our request and the audio session. The magic happens when we request our `speechRecognizer` instance to kick off the transcribing of our data into speech. As our speech data is arriving in streams, the recognizer may receive data later down the line which makes one particular transcription more likely than another, therefore we wait until the recognizer decides it has a 'final' result before we fire the `onTranscriptionCompletion` completion block.
 
-To keep things simple, we trust the speech recognizer's opinion as to what the best transcription is. For more advanced use cases, you may want to dig into the `result`'s transcriptions. Each instance of `SFTranscription` in turn contains an array of `SFTranscriptionSegment`s which contain information as to the duration of the segment and the level of confidence in the recognition.
+To keep things simple, we trust the speech recognizer's opinion as to what the best transcription is. For more advanced use cases, you may want to dig into the `result`'s transcriptions. Each instance of `SFTranscription` in turn contains an array of `SFTranscriptionSegment`s which holds information about the duration of the segment and the level of confidence it has in the recognition.
 
 > Setting up the transcriber to receive input from the microphone isn't really part of this blog post and I've pretty much used the exact same implementation as Apple in their [sample project](https://developer.apple.com/library/prerelease/content/samplecode/SpeakToMe). The only difference is our setting up of the audio session passes a closure which accepts an `AVAudioPCMBuffer` object which contains the audio data coming from the microphone. This closure is fired as new data is received.
 
