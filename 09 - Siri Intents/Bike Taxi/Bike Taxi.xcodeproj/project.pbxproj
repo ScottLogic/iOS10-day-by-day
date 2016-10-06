@@ -51,6 +51,7 @@
 		F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeTaxiIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6109C451DA641B500D68324 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F6109C471DA641B500D68324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D81A8A1DA645F00031E258 /* Bike Taxi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bike Taxi.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		F6109C2C1DA63EA000D68324 /* Bike Taxi */ = {
 			isa = PBXGroup;
 			children = (
+				F6D81A8A1DA645F00031E258 /* Bike Taxi.entitlements */,
 				F6109C2D1DA63EA000D68324 /* AppDelegate.swift */,
 				F6109C2F1DA63EA000D68324 /* ViewController.swift */,
 				F6109C311DA63EA000D68324 /* Main.storyboard */,
@@ -164,6 +166,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XJ74287KY8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					F6109C421DA641B500D68324 = {
 						CreatedOnToolsVersion = 8.0;
@@ -357,6 +364,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bike Taxi/Bike Taxi.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XJ74287KY8;
 				INFOPLIST_FILE = "Bike Taxi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -371,6 +380,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bike Taxi/Bike Taxi.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = XJ74287KY8;
 				INFOPLIST_FILE = "Bike Taxi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -425,6 +436,7 @@
 				F6109C3E1DA63EA000D68324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6109C4B1DA641B500D68324 /* Build configuration list for PBXNativeTarget "BikeTaxiIntent" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +445,7 @@
 				F6109C4D1DA641B500D68324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
