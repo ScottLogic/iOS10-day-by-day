@@ -28,6 +28,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>INRequestRideIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
