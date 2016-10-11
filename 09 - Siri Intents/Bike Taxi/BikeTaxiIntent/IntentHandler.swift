@@ -149,3 +149,18 @@ extension IntentHandler {
         return result
     }
 }
+
+//MARK:- Confirming
+extension IntentHandler {
+    @objc(confirmRequestRide:completion:)
+    func confirm(requestRide intent: INRequestRideIntent, completion: @escaping (INRequestRideIntentResponse) -> Void) {
+        // Verify network connection to our state-of-the-art ride booking service is available
+        
+        // Let's say it is
+        let responseCode = INRequestRideIntentResponseCode.ready
+        let response = INRequestRideIntentResponse(code: responseCode, userActivity: nil)
+        
+        // Move on to the handling stage
+        completion(response)
+    }
+}
