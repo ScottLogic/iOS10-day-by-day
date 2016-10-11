@@ -38,11 +38,13 @@ extension IntentHandler: INRequestRideIntentHandling {
         let driverHandle = INPersonHandle(value: "john@biketaxis.com", type: .emailAddress)
         var personComponents = PersonNameComponents()
         personComponents.familyName = "Appleseed"
-        personComponents.namePrefix = "J"
+        personComponents.givenName = "John"
+        
+        let formatter = PersonNameComponentsFormatter()
         
         let driver = INRideDriver(personHandle: driverHandle,
-                                  nameComponents: PersonNameComponents(),
-                                  displayName: "John Appleseed",
+                                  nameComponents: personComponents,
+                                  displayName: formatter.string(from: personComponents),
                                   image: nil,
                                   contactIdentifier: nil,
                                   customIdentifier: nil)
