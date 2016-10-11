@@ -90,3 +90,32 @@ extension IntentHandler {
         completion(result)
     }
 }
+
+extension IntentHandler {
+    
+    @objc(resolvePickupLocationForRequestRide:withCompletion:)
+    func resolvePickupLocation(forRequestRide intent: INRequestRideIntent, with completion: @escaping (INPlacemarkResolutionResult) -> Void) {
+        completion(placemarkResolutionResult(for: intent.pickupLocation))
+    }
+    
+    @objc(resolveDropOffLocationForRequestRide:withCompletion:) func resolveDropOffLocation(forRequestRide intent: INRequestRideIntent, with completion: @escaping (INPlacemarkResolutionResult) -> Void) {
+        completion(placemarkResolutionResult(for: intent.dropOffLocation))
+    }
+    
+    private func placemarkResolutionResult(for placemark: CLPlacemark?) -> INPlacemarkResolutionResult {
+        guard let placemark = placemark else {
+            return INPlacemarkResolutionResult.needsValue()
+        }
+        
+        let result: INPlacemarkResolutionResult
+        
+        if placemark.isoCountryCode == "GB" {
+            result = INPlacemarkResolutionResult.success(with: placemark)
+        }
+        else {
+            result = INPlacemarkResolutionResult.unsupported()
+        }
+        
+        return result
+    }
+}
