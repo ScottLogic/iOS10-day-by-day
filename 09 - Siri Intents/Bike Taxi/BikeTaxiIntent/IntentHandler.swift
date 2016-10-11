@@ -103,8 +103,6 @@ extension IntentHandler {
         if let rideName = intent.rideOptionName?.spokenPhrase?.lowercased(),
             let taxiClass = BikeTaxiClass(rawValue: rideName) {
             
-            print("Ride class requested: \(rideName)")
-            
             let speakableString = INSpeakableString(identifier: "", spokenPhrase: taxiClass.description, pronunciationHint: taxiClass.description)
             let result = INSpeakableStringResolutionResult.success(with: speakableString)
             completion(result)
