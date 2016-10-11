@@ -50,7 +50,9 @@ extension IntentHandler: INRequestRideIntentHandling {
                                   customIdentifier: nil)
         
         let vehicle = INRideVehicle()
-        vehicle.manufacturer = "Super Bike"
+        
+        vehicle.model = intent.rideOptionName!.spokenPhrase! // Model name will be "Basic" or "Premier"
+        
         // Hardcode the location to be center of Newcastle, UK
         vehicle.location = CLLocation(latitude: 54.978252,
                                       longitude: -1.6177800000000389)
