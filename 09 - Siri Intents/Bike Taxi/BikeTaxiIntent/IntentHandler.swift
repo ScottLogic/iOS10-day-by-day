@@ -23,15 +23,45 @@ enum BikeTaxiClass: String, CustomStringConvertible {
 class IntentHandler: INExtension {
 }
 
+//MARK:- Handling
 extension IntentHandler: INRequestRideIntentHandling {
     
     func handle(requestRide intent: INRequestRideIntent, completion: @escaping (INRequestRideIntentResponse) -> Void) {
-        print("Handling bike taxi request!")
         
-        let responseCode = INRequestRideIntentResponseCode.failureRequiringAppLaunchNoServiceInArea
+        // Our fictional company has unlimited numbers of drivers, all called John Appleseed, so we'll always be able to get to the user.
+        let responseCode = INRequestRideIntentResponseCode.success
         
         let response = INRequestRideIntentResponse(code: responseCode,
                                                    userActivity: nil)
+        
+        // Set up the driver info
+        let driverHandle = INPersonHandle(value: "john@biketaxis.com", type: .emailAddress)
+        var personComponents = PersonNameComponents()
+        personComponents.familyName = "Appleseed"
+        personComponents.namePrefix = "J"
+        
+        let driver = INRideDriver(personHandle: driverHandle,
+                                  nameComponents: PersonNameComponents(),
+                                  displayName: "John Appleseed",
+                                  image: nil,
+                                  contactIdentifier: nil,
+                                  customIdentifier: nil)
+        
+        let vehicle = INRideVehicle()
+        vehicle.manufacturer = "Super Bike"
+        // Hardcode the location to be center of Newcastle, UK
+        vehicle.location = CLLocation(latitude: 54.978252,
+                                      longitude: -1.6177800000000389)
+        
+        // The important part - combining all the above information
+        let status = INRideStatus()
+        status.driver = driver
+        status.vehicle = vehicle
+        status.phase = .confirmed
+        status.pickupLocation = intent.pickupLocation
+        status.dropOffLocation = intent.dropOffLocation
+        
+        response.rideStatus = status
         
         completion(response)
     }
