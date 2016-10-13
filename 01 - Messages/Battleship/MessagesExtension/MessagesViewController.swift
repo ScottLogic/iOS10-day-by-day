@@ -21,7 +21,7 @@ class MessagesViewController: MSMessagesAppViewController {
 }
 
 extension MessagesViewController {
-    private func configureChildViewController(for presentationStyle: MSMessagesAppPresentationStyle,
+    fileprivate func configureChildViewController(for presentationStyle: MSMessagesAppPresentationStyle,
                                               with conversation: MSConversation) {
         // Remove any existing child view controllers
         for child in childViewControllers {
@@ -61,7 +61,7 @@ extension MessagesViewController {
         childViewController.didMove(toParentViewController: self)
     }
     
-    private func createShipLocationViewController(with conversation: MSConversation) -> UIViewController {
+    fileprivate func createShipLocationViewController(with conversation: MSConversation) -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "ShipLocationViewController") as? ShipLocationViewController else {
             fatalError("Cannot instantiate view controller")
         }
@@ -81,7 +81,7 @@ extension MessagesViewController {
         return controller
     }
     
-    private func createShipDestroyViewController(with conversation: MSConversation, model: GameModel) -> UIViewController {
+    fileprivate func createShipDestroyViewController(with conversation: MSConversation, model: GameModel) -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "ShipDestroyViewController") as? ShipDestroyViewController else {
             fatalError("Cannot instantiate view controller")
         }
@@ -105,7 +105,7 @@ extension MessagesViewController {
         return controller
     }
     
-    private func createGameStartViewController() -> UIViewController {
+    fileprivate func createGameStartViewController() -> UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "GameStartViewController") as? GameStartViewController else {
             fatalError("Cannot instantiate view controller")
         }

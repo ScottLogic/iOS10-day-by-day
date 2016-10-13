@@ -15,7 +15,7 @@ class ShipDestroyViewController: UIViewController {
     
     var model: GameModel!
     
-    var onGameCompletion: ((model: GameModel, playerWon: Bool, snapshot: UIImage) -> Void)?
+    var onGameCompletion: ((GameModel, Bool, UIImage) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,11 +64,11 @@ extension ShipDestroyViewController {
         
         if incorrectAttemptsCount() >= GameConstants.incorrectAttemptsAllowed {
             model.isComplete = true
-            onGameCompletion?(model: model, playerWon: false, snapshot: snapshot)
+            onGameCompletion?(model, false, snapshot)
         }
         else if shipsHitCount() == GameConstants.totalShipCount {
             model.isComplete = true
-            onGameCompletion?(model: model, playerWon: true, snapshot: snapshot)
+            onGameCompletion?(model, true, snapshot)
         }
     }
     

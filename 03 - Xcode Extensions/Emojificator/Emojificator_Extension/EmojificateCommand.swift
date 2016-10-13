@@ -16,7 +16,7 @@ class EmojificateCommand: NSObject, XCSourceEditorCommand {
         ";)" : "😉",
         ":(" : "☹️"]
     
-    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: (Error?) -> Void) {
+    func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
         let lines = invocation.buffer.lines
         
         for (index, line) in lines.enumerated() {

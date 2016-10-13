@@ -14,7 +14,7 @@ class ShipLocationViewController: UIViewController {
     @IBOutlet weak var remainingLabel: UILabel!
     @IBOutlet weak var finishedButton: UIButton!
     
-    var onLocationSelectionComplete: ((gameState: GameModel, snapshot: UIImage) -> Void)?
+    var onLocationSelectionComplete: ((GameModel, UIImage) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +42,16 @@ class ShipLocationViewController: UIViewController {
         // Clear screen for snapshot (we don't want to give away where we've located our ships!)
         gameBoard.reset()
         
-        onLocationSelectionComplete?(gameState: model, snapshot: UIImage.snapshot(from: gameBoard))
+        onLocationSelectionComplete?(model, UIImage.snapshot(from: gameBoard))
     }
 }
 
 extension ShipLocationViewController {
-    private var shipsLeftToPosition: Int {
+    fileprivate var shipsLeftToPosition: Int {
         return GameConstants.totalShipCount - self.gameBoard.selectedCells.count
     }
     
-    private func updateLabels() {
+    fileprivate func updateLabels() {
         remainingLabel.text = "Ships to Place: \(shipsLeftToPosition)"
         finishedButton.isEnabled = shipsLeftToPosition == 0
     }

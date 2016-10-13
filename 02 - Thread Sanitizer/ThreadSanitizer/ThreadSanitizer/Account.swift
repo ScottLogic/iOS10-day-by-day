@@ -20,7 +20,7 @@ class Account {
     private let queue = DispatchQueue(label: "com.shinobicontrols.balance-moderator")
     
     /// Withdraws $100 from the account
-    func withdraw(amount: Int, onSuccess: () -> ()) {
+    func withdraw(amount: Int, onSuccess: @escaping () -> ()) {
         queue.async {
             let newBalance = self._balance - amount
 
@@ -42,7 +42,7 @@ class Account {
     }
     
     /// Desposits $100 into the account.
-    func deposit(amount: Int, onSuccess: () -> ()) {
+    func deposit(amount: Int, onSuccess: @escaping () -> ()) {
         queue.async {
             let newBalance = self._balance + amount
             self._balance = newBalance
