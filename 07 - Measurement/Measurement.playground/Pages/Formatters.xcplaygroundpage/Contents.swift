@@ -2,7 +2,7 @@
 
 import Foundation
 
-//: We can `MeasurementFormatter` so we can be locale-aware
+//: We can use `MeasurementFormatter` to be locale-aware
 
 let newcastleToLondon = Measurement(value: 248, unit: UnitLength.miles)
 
