@@ -17,9 +17,9 @@ class GameBoardView: UICollectionView {
         case deselected
     }
     
-    private var cellStyles = Array(repeating: CellStyle.deselected, count: 9)
+    fileprivate var cellStyles = Array(repeating: CellStyle.deselected, count: 9)
     
-    var onCellSelection: ((cellLocation: Int) -> Void)?
+    var onCellSelection: ((Int) -> Void)?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -81,12 +81,12 @@ extension GameBoardView {
         decorate(cell, for: selectionStyle)
     }
     
-    private func decorate(_ cell: UICollectionViewCell, for style: CellStyle) {
+    fileprivate func decorate(_ cell: UICollectionViewCell, for style: CellStyle) {
         switch style {
         case .selectedGreen:
-            cell.backgroundColor = .green()
+            cell.backgroundColor = .green
         case .selectedRed:
-            cell.backgroundColor = .red()
+            cell.backgroundColor = .red
         case .deselected:
             cell.backgroundColor = UIColor(red:0.33, green:0.43, blue:0.54, alpha:1.00)
         }
@@ -107,7 +107,7 @@ extension GameBoardView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCell", for: indexPath)
         
         cell.layer.borderWidth = 5
-        cell.layer.borderColor = UIColor.black().withAlphaComponent(0.5).cgColor
+        cell.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
         
         decorate(cell, for: cellStyles[indexPath.row])
         
@@ -125,7 +125,7 @@ extension GameBoardView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        onCellSelection?(cellLocation: indexPath.row)
+        onCellSelection?(indexPath.row)
     }
 }
 
