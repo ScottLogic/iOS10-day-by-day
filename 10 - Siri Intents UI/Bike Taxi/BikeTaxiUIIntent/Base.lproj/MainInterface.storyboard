@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,25 +18,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet you can't wait!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hy-47-XG2">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="basic" translatesAutoresizingMaskIntoConstraints="NO" id="cMK-4D-uKS"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkE-MS-wpe">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="T49-wE-45q">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mRh-Z4-CdJ">
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type: Basic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB3-EB-YZp">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVJ-kx-nGE" userLabel="Route">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newcastle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgV-Wv-mJk">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="0.94901960780000005" blue="0.89177804969999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="London" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUh-OR-mD4">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="1" green="0.94901960780000005" blue="0.89177804969999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qV4-ND-Nvf" userLabel="Line">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="2" id="ScM-Ga-Pc4"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="MUh-OR-mD4" secondAttribute="trailing" constant="20" id="8H9-me-XEH"/>
+                                                        <constraint firstItem="qV4-ND-Nvf" firstAttribute="centerY" secondItem="ZVJ-kx-nGE" secondAttribute="centerY" id="W5W-r4-5LX"/>
+                                                        <constraint firstItem="MUh-OR-mD4" firstAttribute="leading" secondItem="qV4-ND-Nvf" secondAttribute="trailing" constant="7" id="Yf0-2A-wbH"/>
+                                                        <constraint firstItem="qV4-ND-Nvf" firstAttribute="leading" secondItem="xgV-Wv-mJk" secondAttribute="trailing" constant="7" id="Yim-RC-cuC"/>
+                                                        <constraint firstItem="MUh-OR-mD4" firstAttribute="centerY" secondItem="ZVJ-kx-nGE" secondAttribute="centerY" id="e2O-fv-w9j"/>
+                                                        <constraint firstItem="xgV-Wv-mJk" firstAttribute="centerY" secondItem="ZVJ-kx-nGE" secondAttribute="centerY" id="fGp-ZR-7r0"/>
+                                                        <constraint firstItem="xgV-Wv-mJk" firstAttribute="leading" secondItem="ZVJ-kx-nGE" secondAttribute="leading" constant="20" id="mZH-Y1-qrQ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="mRh-Z4-CdJ" secondAttribute="bottom" constant="5" id="4HL-kG-afS"/>
+                                        <constraint firstItem="mRh-Z4-CdJ" firstAttribute="top" secondItem="T49-wE-45q" secondAttribute="top" constant="5" id="Qte-Xu-MHX"/>
+                                        <constraint firstAttribute="trailing" secondItem="mRh-Z4-CdJ" secondAttribute="trailing" id="rli-jf-xc6"/>
+                                        <constraint firstItem="mRh-Z4-CdJ" firstAttribute="leading" secondItem="T49-wE-45q" secondAttribute="leading" id="vHn-at-Phc"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vBL-Da-opW"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cMK-4D-uKS" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="6q9-qF-wh2"/>
+                            <constraint firstAttribute="trailing" secondItem="RkE-MS-wpe" secondAttribute="trailing" id="7OY-kf-hWn"/>
                             <constraint firstAttribute="trailing" secondItem="cMK-4D-uKS" secondAttribute="trailing" id="ADK-z9-bFw"/>
                             <constraint firstItem="cMK-4D-uKS" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="HSs-QY-j7L"/>
+                            <constraint firstAttribute="bottom" secondItem="RkE-MS-wpe" secondAttribute="bottom" id="Mjs-ix-Dom"/>
                             <constraint firstAttribute="bottom" secondItem="cMK-4D-uKS" secondAttribute="bottom" id="VCs-WK-Ajy"/>
-                            <constraint firstItem="9Hy-47-XG2" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="a8M-fp-Xfy"/>
-                            <constraint firstItem="9Hy-47-XG2" firstAttribute="trailing" secondItem="zMn-AG-sqS" secondAttribute="trailingMargin" id="zam-LV-50W"/>
+                            <constraint firstItem="RkE-MS-wpe" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="gOh-Mh-F61"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="bikeTypeLabel" destination="QB3-EB-YZp" id="Tlb-DM-BjG"/>
+                        <outlet property="dropOffLocationLabel" destination="MUh-OR-mD4" id="qfi-iV-5xh"/>
+                        <outlet property="pickUpLocationLabel" destination="xgV-Wv-mJk" id="CrQ-Mf-p8F"/>
+                        <outlet property="rideImageView" destination="cMK-4D-uKS" id="wc3-No-R4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

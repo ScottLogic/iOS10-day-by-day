@@ -8,18 +8,6 @@
 
 import Intents
 
-enum BikeTaxiClass: String, CustomStringConvertible {
-    case premier
-    case basic
-    
-    var description: String {
-        let characters = self.rawValue.characters
-        let first = String(characters.prefix(1)).capitalized
-        let other = String(characters.dropFirst())
-        return first + other
-    }
-}
-
 class IntentHandler: INExtension {
 }
 

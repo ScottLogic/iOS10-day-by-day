@@ -14,6 +14,9 @@
 		F6109C381DA63EA000D68324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6109C361DA63EA000D68324 /* LaunchScreen.storyboard */; };
 		F6109C461DA641B500D68324 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6109C451DA641B500D68324 /* IntentHandler.swift */; };
 		F6109C4A1DA641B500D68324 /* BikeTaxiIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F615EEE51DAF928600CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
+		F615EEE61DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
+		F615EEE71DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
 		F6C8F5021DAD514B005EF827 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8F5011DAD514B005EF827 /* IntentsUI.framework */; };
 		F6C8F5051DAD514B005EF827 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8F5041DAD514B005EF827 /* IntentViewController.swift */; };
 		F6C8F5081DAD514B005EF827 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8F5061DAD514B005EF827 /* MainInterface.storyboard */; };
@@ -64,6 +67,7 @@
 		F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeTaxiIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6109C451DA641B500D68324 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		F6109C471DA641B500D68324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeTaxiClass.swift; sourceTree = "<group>"; };
 		F6C8F4FF1DAD514B005EF827 /* BikeTaxiUIIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeTaxiUIIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6C8F5011DAD514B005EF827 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		F6C8F5041DAD514B005EF827 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				F6D81A8A1DA645F00031E258 /* Bike Taxi.entitlements */,
 				F6109C2D1DA63EA000D68324 /* AppDelegate.swift */,
 				F6109C2F1DA63EA000D68324 /* ViewController.swift */,
+				F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */,
 				F6109C311DA63EA000D68324 /* Main.storyboard */,
 				F6109C341DA63EA000D68324 /* Assets.xcassets */,
 				F6109C361DA63EA000D68324 /* LaunchScreen.storyboard */,
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6109C301DA63EA000D68324 /* ViewController.swift in Sources */,
+				F615EEE51DAF928600CA9304 /* BikeTaxiClass.swift in Sources */,
 				F6109C2E1DA63EA000D68324 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6109C461DA641B500D68324 /* IntentHandler.swift in Sources */,
+				F615EEE61DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C8F5051DAD514B005EF827 /* IntentViewController.swift in Sources */,
+				F615EEE71DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +591,7 @@
 				F6C8F50E1DAD514B005EF827 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
