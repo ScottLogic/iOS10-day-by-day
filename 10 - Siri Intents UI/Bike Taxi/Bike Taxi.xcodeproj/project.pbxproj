@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6109C2E1DA63EA000D68324 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6109C2D1DA63EA000D68324 /* AppDelegate.swift */; };
+		F6109C301DA63EA000D68324 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6109C2F1DA63EA000D68324 /* ViewController.swift */; };
+		F6109C331DA63EA000D68324 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6109C311DA63EA000D68324 /* Main.storyboard */; };
+		F6109C351DA63EA000D68324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6109C341DA63EA000D68324 /* Assets.xcassets */; };
+		F6109C381DA63EA000D68324 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6109C361DA63EA000D68324 /* LaunchScreen.storyboard */; };
+		F6109C461DA641B500D68324 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6109C451DA641B500D68324 /* IntentHandler.swift */; };
+		F6109C4A1DA641B500D68324 /* BikeTaxiIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F615EEE51DAF928600CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
+		F615EEE61DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
+		F615EEE71DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */; };
+		F6C8F5021DAD514B005EF827 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C8F5011DAD514B005EF827 /* IntentsUI.framework */; };
+		F6C8F5051DAD514B005EF827 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C8F5041DAD514B005EF827 /* IntentViewController.swift */; };
+		F6C8F5081DAD514B005EF827 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6C8F5061DAD514B005EF827 /* MainInterface.storyboard */; };
+		F6C8F50C1DAD514B005EF827 /* BikeTaxiUIIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F6C8F4FF1DAD514B005EF827 /* BikeTaxiUIIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F6C8F5111DAD55B5005EF827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6C8F5101DAD55B5005EF827 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6109C481DA641B500D68324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6109C221DA63EA000D68324 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6109C421DA641B500D68324;
+			remoteInfo = BikeTaxiIntent;
+		};
+		F6C8F50A1DAD514B005EF827 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6109C221DA63EA000D68324 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6C8F4FE1DAD514B005EF827;
+			remoteInfo = BikeTaxiUIIntent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6109C4E1DA641B500D68324 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F6109C4A1DA641B500D68324 /* BikeTaxiIntent.appex in Embed App Extensions */,
+				F6C8F50C1DAD514B005EF827 /* BikeTaxiUIIntent.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F6109C2A1DA63EA000D68324 /* Bike Taxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bike Taxi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6109C2D1DA63EA000D68324 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6109C2F1DA63EA000D68324 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6109C321DA63EA000D68324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6109C341DA63EA000D68324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6109C371DA63EA000D68324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F6109C391DA63EA000D68324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeTaxiIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6109C451DA641B500D68324 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		F6109C471DA641B500D68324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeTaxiClass.swift; sourceTree = "<group>"; };
+		F6C8F4FF1DAD514B005EF827 /* BikeTaxiUIIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BikeTaxiUIIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C8F5011DAD514B005EF827 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		F6C8F5041DAD514B005EF827 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		F6C8F5071DAD514B005EF827 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F6C8F5091DAD514B005EF827 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6C8F5101DAD55B5005EF827 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6D81A8A1DA645F00031E258 /* Bike Taxi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bike Taxi.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6109C271DA63EA000D68324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6109C401DA641B500D68324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C8F4FC1DAD514B005EF827 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8F5021DAD514B005EF827 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6109C211DA63EA000D68324 = {
+			isa = PBXGroup;
+			children = (
+				F6109C2C1DA63EA000D68324 /* Bike Taxi */,
+				F6109C441DA641B500D68324 /* BikeTaxiIntent */,
+				F6C8F5031DAD514B005EF827 /* BikeTaxiUIIntent */,
+				F6C8F5001DAD514B005EF827 /* Frameworks */,
+				F6109C2B1DA63EA000D68324 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6109C2B1DA63EA000D68324 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6109C2A1DA63EA000D68324 /* Bike Taxi.app */,
+				F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */,
+				F6C8F4FF1DAD514B005EF827 /* BikeTaxiUIIntent.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6109C2C1DA63EA000D68324 /* Bike Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				F6D81A8A1DA645F00031E258 /* Bike Taxi.entitlements */,
+				F6109C2D1DA63EA000D68324 /* AppDelegate.swift */,
+				F6109C2F1DA63EA000D68324 /* ViewController.swift */,
+				F615EEE41DAF928600CA9304 /* BikeTaxiClass.swift */,
+				F6109C311DA63EA000D68324 /* Main.storyboard */,
+				F6109C341DA63EA000D68324 /* Assets.xcassets */,
+				F6109C361DA63EA000D68324 /* LaunchScreen.storyboard */,
+				F6109C391DA63EA000D68324 /* Info.plist */,
+			);
+			path = "Bike Taxi";
+			sourceTree = "<group>";
+		};
+		F6109C441DA641B500D68324 /* BikeTaxiIntent */ = {
+			isa = PBXGroup;
+			children = (
+				F6109C451DA641B500D68324 /* IntentHandler.swift */,
+				F6109C471DA641B500D68324 /* Info.plist */,
+			);
+			path = BikeTaxiIntent;
+			sourceTree = "<group>";
+		};
+		F6C8F5001DAD514B005EF827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8F5011DAD514B005EF827 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6C8F5031DAD514B005EF827 /* BikeTaxiUIIntent */ = {
+			isa = PBXGroup;
+			children = (
+				F6C8F5041DAD514B005EF827 /* IntentViewController.swift */,
+				F6C8F5061DAD514B005EF827 /* MainInterface.storyboard */,
+				F6C8F5101DAD55B5005EF827 /* Assets.xcassets */,
+				F6C8F5091DAD514B005EF827 /* Info.plist */,
+			);
+			path = BikeTaxiUIIntent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6109C291DA63EA000D68324 /* Bike Taxi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6109C3C1DA63EA000D68324 /* Build configuration list for PBXNativeTarget "Bike Taxi" */;
+			buildPhases = (
+				F6109C261DA63EA000D68324 /* Sources */,
+				F6109C271DA63EA000D68324 /* Frameworks */,
+				F6109C281DA63EA000D68324 /* Resources */,
+				F6109C4E1DA641B500D68324 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6109C491DA641B500D68324 /* PBXTargetDependency */,
+				F6C8F50B1DAD514B005EF827 /* PBXTargetDependency */,
+			);
+			name = "Bike Taxi";
+			productName = "Bike Taxi";
+			productReference = F6109C2A1DA63EA000D68324 /* Bike Taxi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6109C421DA641B500D68324 /* BikeTaxiIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6109C4B1DA641B500D68324 /* Build configuration list for PBXNativeTarget "BikeTaxiIntent" */;
+			buildPhases = (
+				F6109C3F1DA641B500D68324 /* Sources */,
+				F6109C401DA641B500D68324 /* Frameworks */,
+				F6109C411DA641B500D68324 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeTaxiIntent;
+			productName = BikeTaxiIntent;
+			productReference = F6109C431DA641B500D68324 /* BikeTaxiIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		F6C8F4FE1DAD514B005EF827 /* BikeTaxiUIIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6C8F50F1DAD514B005EF827 /* Build configuration list for PBXNativeTarget "BikeTaxiUIIntent" */;
+			buildPhases = (
+				F6C8F4FB1DAD514B005EF827 /* Sources */,
+				F6C8F4FC1DAD514B005EF827 /* Frameworks */,
+				F6C8F4FD1DAD514B005EF827 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BikeTaxiUIIntent;
+			productName = BikeTaxiUIIntent;
+			productReference = F6C8F4FF1DAD514B005EF827 /* BikeTaxiUIIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6109C221DA63EA000D68324 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ShinobiControls;
+				TargetAttributes = {
+					F6109C291DA63EA000D68324 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					F6109C421DA641B500D68324 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						ProvisioningStyle = Automatic;
+					};
+					F6C8F4FE1DAD514B005EF827 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XJ74287KY8;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F6109C251DA63EA000D68324 /* Build configuration list for PBXProject "Bike Taxi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6109C211DA63EA000D68324;
+			productRefGroup = F6109C2B1DA63EA000D68324 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6109C291DA63EA000D68324 /* Bike Taxi */,
+				F6109C421DA641B500D68324 /* BikeTaxiIntent */,
+				F6C8F4FE1DAD514B005EF827 /* BikeTaxiUIIntent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6109C281DA63EA000D68324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6109C381DA63EA000D68324 /* LaunchScreen.storyboard in Resources */,
+				F6109C351DA63EA000D68324 /* Assets.xcassets in Resources */,
+				F6109C331DA63EA000D68324 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6109C411DA641B500D68324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C8F4FD1DAD514B005EF827 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8F5111DAD55B5005EF827 /* Assets.xcassets in Resources */,
+				F6C8F5081DAD514B005EF827 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6109C261DA63EA000D68324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6109C301DA63EA000D68324 /* ViewController.swift in Sources */,
+				F615EEE51DAF928600CA9304 /* BikeTaxiClass.swift in Sources */,
+				F6109C2E1DA63EA000D68324 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6109C3F1DA641B500D68324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6109C461DA641B500D68324 /* IntentHandler.swift in Sources */,
+				F615EEE61DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C8F4FB1DAD514B005EF827 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6C8F5051DAD514B005EF827 /* IntentViewController.swift in Sources */,
+				F615EEE71DAF92B700CA9304 /* BikeTaxiClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6109C491DA641B500D68324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6109C421DA641B500D68324 /* BikeTaxiIntent */;
+			targetProxy = F6109C481DA641B500D68324 /* PBXContainerItemProxy */;
+		};
+		F6C8F50B1DAD514B005EF827 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6C8F4FE1DAD514B005EF827 /* BikeTaxiUIIntent */;
+			targetProxy = F6C8F50A1DAD514B005EF827 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F6109C311DA63EA000D68324 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6109C321DA63EA000D68324 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F6109C361DA63EA000D68324 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6109C371DA63EA000D68324 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F6C8F5061DAD514B005EF827 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6C8F5071DAD514B005EF827 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F6109C3A1DA63EA000D68324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6109C3B1DA63EA000D68324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6109C3D1DA63EA000D68324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bike Taxi/Bike Taxi.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = "Bike Taxi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F6109C3E1DA63EA000D68324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bike Taxi/Bike Taxi.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = "Bike Taxi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F6109C4C1DA641B500D68324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = BikeTaxiIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi.BikeTaxiIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F6109C4D1DA641B500D68324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = BikeTaxiIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi.BikeTaxiIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F6C8F50D1DAD514B005EF827 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = BikeTaxiUIIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi.BikeTaxiUIIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F6C8F50E1DAD514B005EF827 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XJ74287KY8;
+				INFOPLIST_FILE = BikeTaxiUIIntent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shinobicontrols.Bike-Taxi.BikeTaxiUIIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6109C251DA63EA000D68324 /* Build configuration list for PBXProject "Bike Taxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6109C3A1DA63EA000D68324 /* Debug */,
+				F6109C3B1DA63EA000D68324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6109C3C1DA63EA000D68324 /* Build configuration list for PBXNativeTarget "Bike Taxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6109C3D1DA63EA000D68324 /* Debug */,
+				F6109C3E1DA63EA000D68324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6109C4B1DA641B500D68324 /* Build configuration list for PBXNativeTarget "BikeTaxiIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6109C4C1DA641B500D68324 /* Debug */,
+				F6109C4D1DA641B500D68324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6C8F50F1DAD514B005EF827 /* Build configuration list for PBXNativeTarget "BikeTaxiUIIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6C8F50D1DAD514B005EF827 /* Debug */,
+				F6C8F50E1DAD514B005EF827 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6109C221DA63EA000D68324 /* Project object */;
+}
